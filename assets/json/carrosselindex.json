@@ -1,0 +1,37 @@
+{
+    "imagens": [
+        {
+            "id": 1,
+            "nome": "Areas-da-fisioterapia-935x614.jpg",
+            "local": "assets/images/carrossel/",
+            "largura": "500",
+            "altura": "300",
+            "textoAlternativo": "Fisioterapia 01",
+            "tituloSlide": "Fisioterapias para você",
+            "descricaoSlide": "Com vários exercícios para uma recuperção saudável.",
+            "link": ""
+        },
+        {
+            "id": 2,
+            "nome": "fisioterapeuta-tratando-perna-ferida-de-paciente-do-sexo-masculino_229060-150.webp",
+            "local": "assets/images/carrossel/",
+            "largura": "500",
+            "altura": "300",
+            "textoAlternativo": "Fisioterapia 02",
+            "tituloSlide": "Membros inferiores",
+            "descricaoSlide": "Exercícios para fortalecer suas pernas.",
+            "link": ""
+        },
+        {
+            "id": 3,
+            "nome": "Fisioterapia-Clinica-Salute-Care-.png",
+            "local": "assets/images/carrossel/",
+            "largura": "500",
+            "altura": "300",
+            "textoAlternativo": "Fisioterapia 03",
+            "tituloSlide": "Atendimento",
+            "descricaoSlide": "Nossos paciêntes são cuidados com ateção e carinho.",
+            "link": ""
+        }
+    ]
+}

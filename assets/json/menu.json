@@ -1,0 +1,16 @@
+{
+    "itensMenu": [
+        {
+            "id": 1,
+            "label": "Home",
+            "link": "home",
+            "submenu": []
+        },
+        {
+            "id": 2,
+            "label": "Filhotes",
+            "link": "clinicas",
+            "submenu": []
+        }
+    ]
+}

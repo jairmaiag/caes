@@ -1,0 +1,9 @@
+<h1>Regras</h1>
+<div class="container-fluid" id="listaregras"></div>
+<script>
+    window.jsonRegras = $.getJSON('assets/json/regras.json');
+    window.jsonRegras.done(data => {
+        montarListaCards(data.regras,$('#listaregras'));
+    });
+    delete window.jsonRegras;
+</script>

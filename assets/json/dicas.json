@@ -1,0 +1,46 @@
+{
+    "dicas": [
+        {
+            "id": 1,
+            "titulo": "Postura",
+            "textoprincipal": "Inicie ficando de forma ereta, tanto em pé, quanto sentado.",
+            "outrosTextos": [
+                "Isso evita dores nas costas."
+            ],
+            "imagem": {
+                "altura": "200",
+                "largura": "100",
+                "arquivo": "assets/images/regras/atrassado.png",
+                "alt": "calendario"
+            }
+        },
+        {
+            "id": 2,
+            "titulo": "Respiração",
+            "textoprincipal": "Quando executar os exercícios, inspire pelo nariz e respire pela boca.",
+            "outrosTextos": [
+                "Vai diminuir o cansaço."
+            ],
+            "imagem": {
+                "altura": "200",
+                "largura": "100",
+                "arquivo": "assets/images/regras/atrassado.png",
+                "alt": "calendario"
+            }
+        },
+        {
+            "id": 3,
+            "titulo": "Concentração",
+            "textoprincipal": "Concentre-se no exercício proposto.",
+            "outrosTextos": [
+                "Sua melhora dependerá da boa realização dos exercícios."
+            ],
+            "imagem": {
+                "altura": "200",
+                "largura": "100",
+                "arquivo": "assets/images/regras/atrassado.png",
+                "alt": "calendario"
+            }
+        }
+    ]
+}

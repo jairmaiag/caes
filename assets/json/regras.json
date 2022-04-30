@@ -1,0 +1,47 @@
+{
+    "regras": [
+        {
+            "id": 1,
+            "titulo": "Higienização",
+            "textoprincipal": "Use máscara e sempre que possível higienize com álcool os equipamentos que foram utilizados.",
+            "outrosTextos": [
+                "*Saude é um dever de todos."
+            ],
+            "imagem": {
+                "altura": "200",
+                "largura": "100",
+                "arquivo": "assets/images/regras/borrifador.png",
+                "alt": "borrifador"
+            }
+        },
+        {
+            "id": 2,
+            "titulo": "Atividades",
+            "textoprincipal": "Aproveite ao máximo o tempo de sua sessão.",
+            "outrosTextos": [
+                "*Cuidado com uso excecivo do celular e também com barulhos indesejados aos demais."
+            ],
+            "imagem": {
+                "altura": "200",
+                "largura": "50",
+                "arquivo": "assets/images/regras/calendario.png",
+                "alt": "calendario"
+            }
+        },
+        {
+            "id": 3,
+            "titulo": "Faltas e tolerância",
+            "textoprincipal": "Cuidado com as faltas.",
+            "outrosTextos": [
+                "*Pacientes com 3 faltas sem aviso são automaticamente cortados do sistema.",
+                "Os 15 minutos de tolerância no atraso são para eventualidades."
+            ],
+            "imagem": {
+                "altura": "200",
+                "largura": "100",
+                "arquivo": "assets/images/regras/atrassado.png",
+                "alt": "atrassado"
+            }
+        }
+    ]
+}

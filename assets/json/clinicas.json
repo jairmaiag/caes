@@ -1,0 +1,68 @@
+{
+    "clinicas": [
+        {
+            "id": 1,
+            "titulo": "Unidade Floresta",
+            "endereco": {
+                "logradouro": "Av",
+                "nome": "Santa Catarina",
+                "numero": "1100",
+                "bairro": "Floresta",
+                "cidade": "Joinville",
+                "uf": "SC",
+                "cep": "89211-301",
+                "mapa": "https://goo.gl/maps/XVXekMqWtLTSPzZD8"
+            },
+            "telefones": [
+                {
+                    "id": 1,
+                    "ddd": "047",
+                    "numero": "3031-9398",
+                    "tipo": "fixo"
+                },
+                {
+                    "id": 2,
+                    "ddd": "047",
+                    "numero": "99207-2074",
+                    "tipo": "movel"
+                }
+            ],
+            "horario": {
+                "manha": "07:00 às 12:00",
+                "tarde": "13:30 às 18:30"
+            }
+        },
+        {
+            "id": 2,
+            "titulo": "Unidade Fátima",
+            "endereco": {
+                "logradouro": "Rua",
+                "nome": "Guanabara",
+                "numero": "2535",
+                "bairro": "Fátima",
+                "cidade": "Joinville",
+                "uf": "SC",
+                "cep": "89229-000",
+                "mapa": "https://goo.gl/maps/mivFwC1UuKu5bppu6"
+            },
+            "telefones": [
+                {
+                    "id": 3,
+                    "ddd": "047",
+                    "numero": "3438-3518",
+                    "tipo": "fixo"
+                },
+                {
+                    "id": 4,
+                    "ddd": "047",
+                    "numero": "99733-7242",
+                    "tipo": "movel"
+                }
+            ],
+            "horario": {
+                "manha": "07:00 às 12:00",
+                "tarde": "13:30 às 18:30"
+            }
+        }
+    ]
+}

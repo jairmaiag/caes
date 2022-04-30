@@ -1,0 +1,9 @@
+<h1>Dicas</h1>
+<div class="container-fluid" id="listadicas"></div>
+<script>
+    window.jsonDicas = $.getJSON('assets/json/dicas.json');
+    window.jsonDicas.done(data => {
+        montarListaCards(data.dicas,$('#listadicas'));
+    });
+    delete window.jsonDicas;
+</script>

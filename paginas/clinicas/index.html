@@ -1,0 +1,47 @@
+<h1 id="cli">Clínicas</h1>
+<div class="container-fluid" id="listaUnidades"></div>
+<script>
+    window.jsonClinicas = $.getJSON('assets/json/clinicas.json');
+    window.jsonClinicas.done(data => {
+        const lista = $('#listaUnidades');
+        const { clinicas } = data;
+        data.clinicas.forEach((clinica, index) => {
+            const { logradouro, nome, numero, bairro, cidade, uf, cep, mapa } = clinica.endereco;
+            clinicas[index].textoprincipal = `${logradouro} ${nome}, ${numero} - ${bairro} - ${cidade}, ${uf} - CEP: ${cep}`;
+            clinicas[index].outrosTextos = [];
+
+            const celular = window.navigator.userAgent.toLocaleLowerCase().match(/android/g) == "android";
+            if (clinica.telefones.length > 0) {
+                clinica.telefones.forEach(fone => {
+                    let linkWahtssIni = "";
+                    if (fone.tipo == 'movel') {
+                        if (celular) {
+                            linkWahtssIni = `<a href="http://api.whatsapp.com/send?1=pt_BR&amp;phone=55${fone.ddd}${fone.numero}&text=Olá!%20Estou%20em%20seu%20site%2C%20pode%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer">`;
+                        } else {
+                            linkWahtssIni = `<a href="https://web.whatsapp.com/send?phone=55${fone.ddd}${fone.numero}&text=Olá!%20Estou%20em%20seu%20site%2C%20pode%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer">`;
+                        }
+                    }
+                    const icone = fone.tipo == "fixo" ? 'fa-phone' : 'fa-whatsapp';
+
+                    let texto = `${linkWahtssIni}<i class="fa ${icone}" aria-hidden="true"></i> (${fone.ddd}) ${fone.numero}${celular ? "</a>" : fone.tipo == 'movel' ? '</a>' : ''} `;
+                    clinicas[index].outrosTextos.push(texto);
+                });
+            }
+
+            const aVisitar = $(document.createElement('a'));
+            const icone = $(document.createElement('em'));
+            icone.addClass('fa');
+            icone.addClass('fa-map-marker');
+            icone.attr('aria-hidden', 'true');
+            icone.html(' Mapa');
+            aVisitar.attr('href', mapa);
+            aVisitar.attr('target', 'blank');
+            aVisitar.addClass('btn');
+            aVisitar.addClass('btn-primary');
+            icone.appendTo(aVisitar);
+            clinicas[index].outrosTextos.push(aVisitar);
+        });
+        montarListaCards(clinicas, $('#listaUnidades'));
+    });
+    delete window.jsonClinicas;
+</script>
