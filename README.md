@@ -16,7 +16,9 @@
 </a>
 
 ## Site para anúncios de filhotes.
-A execução pode ser feita em [https://jairmaiag.github.io/caes](https://jairmaiag.github.io/caes/)  
+A execução pode ser feita em <a href="https://jairmaiag.github.io/caes/" alt="site de caẽs" target="_blank">https://jairmaiag.github.io/caes/</a>
+
+[https://jairmaiag.github.io/caes](https://jairmaiag.github.io/caes/)  
 
 Aqui foi estudado o Bootstrap 4.6.1, JQuery 3 e [font-awesome 4.7.0](https://onface.github.io/font-awesome/) para os ícones.
 
