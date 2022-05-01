@@ -1,0 +1,37 @@
+{
+    "imagens": [
+        {
+            "id": 1,
+            "nome": "frida02.jpg",
+            "local": "assets/images/caes/frida/",
+            "largura": "200",
+            "altura": "400",
+            "textoAlternativo": "Frida 02",
+            "tituloSlide": "Frida 02",
+            "descricaoSlide": "Linda mamãe!",
+            "link": ""
+        },
+        {
+            "id": 2,
+            "nome": "frida03.jpg",
+            "local": "assets/images/caes/frida/",
+            "largura": "200",
+            "altura": "400",
+            "textoAlternativo": "Frida 03",
+            "tituloSlide": "Frida 03",
+            "descricaoSlide": "Brincalhão, parceiro e muito fofo.",
+            "link": ""
+        },
+        {
+            "id": 3,
+            "nome": "frida04.jpg",
+            "local": "assets/images/caes/frida/",
+            "largura": "200",
+            "altura": "400",
+            "textoAlternativo": "Frida 04",
+            "tituloSlide": "Frida 04",
+            "descricaoSlide": "Mandona e atenta a tudo.",
+            "link": ""
+        }
+    ]
+}

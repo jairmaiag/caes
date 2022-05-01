@@ -9,10 +9,10 @@
             "sexo": "M",
             "raca": "Shih-tzu",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
-                "alt": "morena 01"
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/logo.png",
+                "alt": "odin 01"
             },
             "imagens": [],
             "vacinas": [],
@@ -27,9 +27,9 @@
             "sexo": "F",
             "raca": "Shih-tzu",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/logo.png",
                 "alt": "morena 01"
             },
             "imagens": [],
@@ -45,9 +45,9 @@
             "sexo": "F",
             "raca": "Shih-tzu",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/logo.png",
                 "alt": "morena 01"
             },
             "imagens": [],
@@ -63,9 +63,9 @@
             "sexo": "F",
             "raca": "Shih-tzu",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/logo.png",
                 "alt": "morena 01"
             },
             "imagens": [],
@@ -81,9 +81,9 @@
             "sexo": "F",
             "raca": "Shih-tzu",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/logo.png",
                 "alt": "morena 01"
             },
             "imagens": [],
@@ -99,9 +99,9 @@
             "sexo": "F",
             "raca": "Shih-tzu",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/logo.png",
                 "alt": "morena 01"
             },
             "imagens": [],
@@ -117,10 +117,10 @@
             "sexo": "M",
             "raca": "Spitz Alemão",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
-                "alt": "morena 01"
+                "altura": "400",
+                "largura": "400",
+                "arquivo": "assets/images/caes/conan/conan01.jpg",
+                "alt": "conan 01"
             },
             "imagens": [],
             "vacinas": [],
@@ -135,9 +135,9 @@
             "sexo": "F",
             "raca": "Spitz Alemão",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
+                "altura": "400",
+                "largura": "400",
+                "arquivo": "assets/images/logo.png",
                 "alt": "morena 01"
             },
             "imagens": [],
@@ -153,12 +153,48 @@
             "sexo": "F",
             "raca": "Spitz Alemão",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
-                "alt": "morena 01"
+                "altura": "400",
+                "largura": "400",
+                "arquivo": "assets/images/caes/frida/frida01.jpg",
+                "alt": "Frida",
+                "link": "",
+                "idmodal": "#modalExemplo"
             },
-            "imagens": [],
+            "imagens": [
+                {
+                    "id": 2,
+                    "altura": "400",
+                    "largura": "400",
+                    "arquivo": "assets/images/caes/frida/frida02.jpg",
+                    "alt": "Frida 02",
+                    "textoAlternativo": "Frida 02",
+                    "tituloSlide": "Frida 02",
+                    "descricaoSlide": "Linda mamãe!",
+                    "link": ""
+                },
+                {
+                    "id": 3,
+                    "altura": "400",
+                    "largura": "400",
+                    "arquivo": "assets/images/caes/frida/frida03.jpg",
+                    "alt": "Frida 03",
+                    "textoAlternativo": "Frida 02",
+                    "tituloSlide": "Frida 02",
+                    "descricaoSlide": "Linda mamãe!",
+                    "link": ""
+                },
+                {
+                    "id": 4,
+                    "altura": "400",
+                    "largura": "400",
+                    "arquivo": "assets/images/caes/frida/frida04.jpg",
+                    "alt": "Frida 04",
+                    "textoAlternativo": "Frida 02",
+                    "tituloSlide": "Frida 02",
+                    "descricaoSlide": "Linda mamãe!",
+                    "link": ""
+                }
+            ],
             "vacinas": [],
             "descricao": "Agitada, não gosta de ninguém passando na frente da casa."
         },
@@ -171,9 +207,9 @@
             "sexo": "F",
             "raca": "Spitz Alemão",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/odin01.jpg",
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/logo.png",
                 "alt": "morena 01"
             },
             "imagens": [],

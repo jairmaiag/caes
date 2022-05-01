@@ -42,15 +42,27 @@ CardDeck.prototype.mountCardDeck = function () {
 }
 CardDeck.prototype.mountImage = function (imagem) {
     const imageCard = $(document.createElement('img'));
-    if (!imagem) {
-        return imageCard;
+    if (imagem === undefined || imagem === null || imagem.length === 0) {
+        imagem = {
+            arquivo: 'assets/images/logo.png',
+            alt: 'logo',
+            largura: 200,
+            altura: 400
+        }
     }
     imageCard.addClass('card-img-top');
-    imageCard.addClass('mt-3');
     imageCard.attr('width', imagem.largura);
     imageCard.attr('height', imagem.altura);
     imageCard.attr('src', imagem.arquivo);
     imageCard.attr('alt', imagem.alt);
+    if (imagem.idmodal) {
+        const linkImageCard = $(document.createElement('a'));
+        linkImageCard.attr('data-toggle', 'modal');
+        linkImageCard.attr('data-target', imagem.idmodal);
+        linkImageCard.attr('href', '#');
+        imageCard.appendTo(linkImageCard);
+        return linkImageCard;
+    }
     return imageCard;
 };
 CardDeck.prototype.mountCard = function (data, vazio) {
@@ -234,10 +246,10 @@ const getMenu = function () {
 }
 const montarCarrossel = function (idDivCarrossel, arquivoJson) {
     if (idDivCarrossel === undefined) {
-        return;
+        return null;
     }
     if (arquivoJson === undefined) {
-        return;
+        return null;
     }
     const carro = $(`#${idDivCarrossel}`);
     const jsonCarro = $.getJSON(`assets/json/${arquivoJson}`);
@@ -337,14 +349,14 @@ const trataDate = function (date, comIdade) {
     let meses = null;
     let dias = null;
 
-    if(comIdade){
+    if (comIdade) {
         let agora = new Date();
         anos = agora.getFullYear() - date.getFullYear();
     }
-    return { 
+    return {
         toString: dia + "/" + mes + "/" + date.getFullYear(),
         anos: anos,
-        meses:meses,
-        dias:dias
+        meses: meses,
+        dias: dias
     }
 }

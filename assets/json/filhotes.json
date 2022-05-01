@@ -88,9 +88,9 @@
             "sexo": "F",
             "raca":"Spitz Alemão",
             "imagem": {
-                "altura": "200",
-                "largura": "100",
-                "arquivo": "assets/images/morena01.jpg",
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/morena/morena01.jpg",
                 "alt": "morena 01"
             },
             "imagens": [],
