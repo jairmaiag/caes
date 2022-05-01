@@ -9,7 +9,7 @@
         window.jsonPais.done(data => {
             const { caes } = data;
             filhotes.forEach((cao, index) => {
-                const { id, nome, nascimento, paiId, maeId, sexo, raca, vacinas, descricao } = cao;
+                const { id, nome, nascimento, paiId, maeId, sexo, raca, vacinas, descricao, valor } = cao;
                 const pai = caes.find(p => p.id == paiId);
                 const mae = caes.find(m => m.id == maeId);
                 filhotes[index].titulo = nome;
@@ -21,6 +21,8 @@
                 textos.push("Nascimento: " + toString);
                 textos.push("Pai: " + pai.nome);
                 textos.push("Mãe: " + mae.nome);
+                textos.push("Valor: R$ " + valor+",00");
+                
                 filhotes[index].outrosTextos = textos;
             });
             montarListaCards(filhotes, $('#listaFilhotes'));

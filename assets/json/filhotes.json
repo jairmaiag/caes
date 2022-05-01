@@ -16,7 +16,8 @@
             },
             "imagens": [],
             "vacinas": [],
-            "descricao":"Brincalhão, ativo e muito esperto."
+            "valor": 600.00,
+            "descricao": "Brincalhão, ativo e muito esperto."
         },
         {
             "id": 2,
@@ -34,7 +35,8 @@
             },
             "imagens": [],
             "vacinas": [],
-            "descricao":"Adora um colo e morder o Mini Odin."
+            "valor": 600.00,
+            "descricao": "Adora um colo e morder o Mini Odin."
         },
         {
             "id": 3,
@@ -52,7 +54,8 @@
             },
             "imagens": [],
             "vacinas": [],
-            "descricao":"Dorminhoco e comilão. Gosta de uma luta com o Mascarado."
+            "valor": 600.00,
+            "descricao": "Dorminhoco e comilão. Gosta de uma luta com o Mascarado."
         },
         {
             "id": 4,
@@ -70,7 +73,8 @@
             },
             "imagens": [],
             "vacinas": [],
-            "descricao":"Muito meiga, vive ao lado da irmã Ursinho."
+            "valor": 900.00,
+            "descricao": "Muito meiga, vive ao lado da irmã Ursinho."
         },
         {
             "id": 5,
@@ -88,7 +92,8 @@
             },
             "imagens": [],
             "vacinas": [],
-            "descricao":"Gosta de ficar mordendo os dedos do pé de quem estiver por perto."
+            "valor": 900.00,
+            "descricao": "Gosta de ficar mordendo os dedos do pé de quem estiver por perto."
         },
         {
             "id": 6,
@@ -97,11 +102,12 @@
             "paiId": 7,
             "maeId": 8,
             "sexo": "F",
-            "raca":"Spitz Alemão",
+            "raca": "Spitz Alemão",
             "imagem": "",
             "imagens": [],
             "vacinas": [],
-            "descricao":"Mandona e a líder das irmãs. Dentinhos nascendo."
+            "valor": 2500.00,
+            "descricao": "Mandona e a líder das irmãs. Dentinhos nascendo."
         },
         {
             "id": 7,
@@ -110,7 +116,7 @@
             "paiId": 7,
             "maeId": 8,
             "sexo": "F",
-            "raca":"Spitz Alemão",
+            "raca": "Spitz Alemão",
             "imagem": {
                 "altura": "400",
                 "largura": "200",
@@ -119,7 +125,8 @@
             },
             "imagens": [],
             "vacinas": [],
-            "descricao":"Adora dormir de barriga para cima e ser beijada."
+            "valor": 2500.00,
+            "descricao": "Adora dormir de barriga para cima e ser beijada."
         },
         {
             "id": 8,
@@ -128,11 +135,12 @@
             "paiId": 7,
             "maeId": 8,
             "sexo": "F",
-            "raca":"Spitz Alemão",
+            "raca": "Spitz Alemão",
             "imagem": "",
             "imagens": [],
             "vacinas": [],
-            "descricao":"Lembra muito o ursinho da coca-cola."
+            "valor": 2500.00,
+            "descricao": "Lembra muito o ursinho da coca-cola."
         }
     ]
 }
