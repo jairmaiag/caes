@@ -8,7 +8,12 @@
             "maeId": 6,
             "sexo": "M",
             "raca": "Shih-tzu",
-            "imagem": "",
+            "imagem": {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/senhordosaneis/senhordosaneis01.jpeg",
+                "alt": "Senhor dos aneis"
+            },
             "imagens": [],
             "vacinas": [],
             "descricao":"Brincalhão, ativo e muito esperto."
@@ -21,12 +26,16 @@
             "maeId": 6,
             "sexo": "M",
             "raca": "Shih-tzu",
-            "imagem": "",
+            "imagem": {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/mascarado/mascarado01.jpeg",
+                "alt": "Senhor dos aneis"
+            },
             "imagens": [],
             "vacinas": [],
             "descricao":"Adora um colo e morder o Mini Odin."
-        }
-        ,
+        },
         {
             "id": 3,
             "nome": "Mini Odin",
@@ -35,7 +44,12 @@
             "maeId": 6,
             "sexo": "M",
             "raca": "Shih-tzu",
-            "imagem": "",
+            "imagem": {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/miniodin/miniodin01.jpeg",
+                "alt": "Senhor dos aneis"
+            },
             "imagens": [],
             "vacinas": [],
             "descricao":"Dorminhoco e comilão. Gosta de uma luta com o Mascarado."
@@ -48,7 +62,12 @@
             "maeId": 6,
             "sexo": "F",
             "raca": "Shih-tzu",
-            "imagem": "",
+            "imagem": {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/meia/meia01.jpeg",
+                "alt": "Senhor dos aneis"
+            },
             "imagens": [],
             "vacinas": [],
             "descricao":"Muito meiga, vive ao lado da irmã Ursinho."
@@ -61,7 +80,12 @@
             "maeId": 6,
             "sexo": "F",
             "raca": "Shih-tzu",
-            "imagem": "",
+            "imagem": {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/ursinho/ursinho01.jpeg",
+                "alt": "Senhor dos aneis"
+            },
             "imagens": [],
             "vacinas": [],
             "descricao":"Gosta de ficar mordendo os dedos do pé de quem estiver por perto."
@@ -90,7 +114,7 @@
             "imagem": {
                 "altura": "400",
                 "largura": "200",
-                "arquivo": "assets/images/caes/morena/morena01.jpg",
+                "arquivo": "assets/images/caes/morena/morena01.jpeg",
                 "alt": "morena 01"
             },
             "imagens": [],
@@ -108,7 +132,7 @@
             "imagem": "",
             "imagens": [],
             "vacinas": [],
-            "descricao":"Lembra muito o urisinho da coca-cola."
+            "descricao":"Lembra muito o ursinho da coca-cola."
         }
     ]
 }
