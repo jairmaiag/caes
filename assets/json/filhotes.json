@@ -1,0 +1,101 @@
+{
+    "filhotes": [
+        {
+            "id": 1,
+            "nome": "Senhor dos aneis",
+            "nascimento": "2021-10-20T03:00:00.000Z",
+            "paiId": 1,
+            "maeId": 6,
+            "sexo": "M",
+            "raca": "Shih-tzu",
+            "fotoprincipal": "",
+            "fotos": [],
+            "vacinas": []
+        },
+        {
+            "id": 2,
+            "nome": "Mascarado",
+            "nascimento": "2021-10-20T03:00:00.000Z",
+            "paiId": 1,
+            "maeId": 6,
+            "sexo": "M",
+            "raca": "Shih-tzu",
+            "fotoprincipal": "",
+            "fotos": [],
+            "vacinas": []
+        }
+        ,
+        {
+            "id": 3,
+            "nome": "Mini Odin",
+            "nascimento": "2021-10-20T03:00:00.000Z",
+            "paiId": 1,
+            "maeId": 6,
+            "sexo": "M",
+            "raca": "Shih-tzu",
+            "fotoprincipal": "",
+            "fotos": [],
+            "vacinas": []
+        },
+        {
+            "id": 4,
+            "nome": "Pé de meia",
+            "nascimento": "2021-10-20T03:00:00.000Z",
+            "paiId": 1,
+            "maeId": 6,
+            "sexo": "F",
+            "raca": "Shih-tzu",
+            "fotoprincipal": "",
+            "fotos": [],
+            "vacinas": []
+        },
+        {
+            "id": 5,
+            "nome": "Ursinho",
+            "nascimento": "2021-10-20T03:00:00.000Z",
+            "paiId": 1,
+            "maeId": 6,
+            "sexo": "F",
+            "raca": "Shih-tzu",
+            "fotoprincipal": "",
+            "fotos": [],
+            "vacinas": []
+        },
+        {
+            "id": 6,
+            "nome": "Loirinha",
+            "nascimento": "2021-10-20T03:00:00.000Z",
+            "paiId": 7,
+            "maeId": 8,
+            "sexo": "F",
+            "raca":"Spitz Alemão",
+            "fotoprincipal": "",
+            "fotos": [],
+            "vacinas": []
+        },
+        {
+            "id": 7,
+            "nome": "Morena",
+            "nascimento": "2021-10-20T03:00:00.000Z",
+            "paiId": 7,
+            "maeId": 8,
+            "sexo": "F",
+            "raca":"Spitz Alemão",
+            "fotoprincipal": "",
+            "fotos": [],
+            "vacinas": []
+        },
+        {
+            "id": 8,
+            "nome": "Branquinha",
+            "nascimento": "2021-10-20T03:00:00.000Z",
+            "paiId": 7,
+            "maeId": 8,
+            "sexo": "F",
+            "raca":"Spitz Alemão",
+            "fotoprincipal": "",
+            "fotos": [],
+            "vacinas": []
+        }
+    ]
+}
