@@ -15,7 +15,7 @@
         {
             "id": 2,
             "label": "Filhotes",
-            "link": "clinicas",
+            "link": "filhotes",
             "submenu": []
         }
     ]
