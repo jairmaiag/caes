@@ -69,12 +69,12 @@ CardDeck.prototype.mountCard = function (data, vazio) {
     return divCard;
 };
 CardDeck.prototype.mountHead = function (titulo) {
-    if (!titulo) {
-        return;
-    }
     const divCardHead = $(document.createElement('div'));
     divCardHead.addClass("card-header");
     divCardHead.addClass("text-primary");
+    if (!titulo) {
+        return divCardHead;
+    }
     divCardHead.html(titulo);
     return divCardHead;
 }
@@ -260,6 +260,7 @@ const montarCarrossel = function (idDivCarrossel, arquivoJson) {
             const imgImagem = $(document.createElement('img'));
             imgImagem.addClass('d-block');
             imgImagem.addClass('w-100');
+
             imgImagem.appendTo(divCarroItem);
             imgImagem.attr('src', `${image.local}/${image.nome}`);
             imgImagem.attr('alt', `${image.textoAlternativo}`);
@@ -273,6 +274,7 @@ const montarCarrossel = function (idDivCarrossel, arquivoJson) {
             divLegendaItem.addClass('carousel-caption');
             divLegendaItem.addClass('d-none');
             divLegendaItem.addClass('d-md-block');
+            divLegendaItem.addClass('fundo-carousel-caption');
             divLegendaItem.appendTo(divCarroItem);
 
             const h5TituloLegenda = $(document.createElement('h5'));
@@ -322,4 +324,27 @@ const montarCarrossel = function (idDivCarrossel, arquivoJson) {
         aProximo.appendTo(carro);
         carro.carousel();
     });
+}
+const trataDate = function (date, comIdade) {
+    if (!date) {
+        return null;
+    }
+    const day = date.getDate();
+    const month = date.getMonth() + 1;
+    const dia = day < 10 ? "0" + day : day;
+    const mes = month < 10 ? "0" + month : month;
+    let anos = null;
+    let meses = null;
+    let dias = null;
+
+    if(comIdade){
+        let agora = new Date();
+        anos = agora.getFullYear() - date.getFullYear();
+    }
+    return { 
+        toString: dia + "/" + mes + "/" + date.getFullYear(),
+        anos: anos,
+        meses:meses,
+        dias:dias
+    }
 }

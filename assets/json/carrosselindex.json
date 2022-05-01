@@ -6,9 +6,9 @@
             "local": "assets/images/carrossel/",
             "largura": "500",
             "altura": "300",
-            "textoAlternativo": "Fisioterapia 01",
-            "tituloSlide": "Fisioterapias para você",
-            "descricaoSlide": "Com vários exercícios para uma recuperção saudável.",
+            "textoAlternativo": "Fran",
+            "tituloSlide": "Fran",
+            "descricaoSlide": "Linda mamãe!",
             "link": ""
         },
         {
@@ -17,9 +17,9 @@
             "local": "assets/images/carrossel/",
             "largura": "500",
             "altura": "300",
-            "textoAlternativo": "Fisioterapia 02",
-            "tituloSlide": "Membros inferiores",
-            "descricaoSlide": "Exercícios para fortalecer suas pernas.",
+            "textoAlternativo": "Odin",
+            "tituloSlide": "Odin",
+            "descricaoSlide": "Brincalhão, parceiro e muito fofo.",
             "link": ""
         },
         {
@@ -28,9 +28,42 @@
             "local": "assets/images/carrossel/",
             "largura": "500",
             "altura": "300",
-            "textoAlternativo": "Fisioterapia 03",
-            "tituloSlide": "Atendimento",
-            "descricaoSlide": "Nossos paciêntes são cuidados com ateção e carinho.",
+            "textoAlternativo": "Jade",
+            "tituloSlide": "Jade",
+            "descricaoSlide": "Mandona e atenta a tudo.",
+            "link": ""
+        },
+        {
+            "id": 4,
+            "nome": "Fisioterapia-Clinica-Salute-Care-.png",
+            "local": "assets/images/carrossel/",
+            "largura": "500",
+            "altura": "300",
+            "textoAlternativo": "Dark",
+            "tituloSlide": "Dark",
+            "descricaoSlide": "Personalidade forte.",
+            "link": ""
+        },
+        {
+            "id": 5,
+            "nome": "Fisioterapia-Clinica-Salute-Care-.png",
+            "local": "assets/images/carrossel/",
+            "largura": "500",
+            "altura": "300",
+            "textoAlternativo": "Ava",
+            "tituloSlide": "Ava",
+            "descricaoSlide": "Meiga e muito carinhosa.",
+            "link": ""
+        },
+        {
+            "id": 6,
+            "nome": "Fisioterapia-Clinica-Salute-Care-.png",
+            "local": "assets/images/carrossel/",
+            "largura": "500",
+            "altura": "300",
+            "textoAlternativo": "Lilithi",
+            "tituloSlide": "Lilithi",
+            "descricaoSlide": "Curiosa e cuidadosa com os filhotes.",
             "link": ""
         }
     ]

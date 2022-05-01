@@ -50,7 +50,10 @@ h1 {
 .corFundoMenu {
     background-image: linear-gradient(0deg, #94c5bf, #118f7e);
 }
-
+.fundo-carousel-caption{
+    background-color: #1e1e1e;
+    opacity: 0.6;
+}
 .corFontMenu {
     color: #ffffff;
 }

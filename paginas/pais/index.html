@@ -1,0 +1,61 @@
+<h1 id="pais">Pais e mães</h1>
+<div class="container-fluid" id="listaPais"></div>
+<script>
+    window.jsonPais = $.getJSON('assets/json/caes.json');
+    window.jsonPais.done(data => {
+        const lista = $('#listaPais');
+        const { caes } = data;
+        caes.forEach((cao, index) => {
+            const { id, nome, nascimento, paiId, maeId, sexo, raca, fotoprincipal, fotos, vacinas } = cao;
+            caes[index].titulo = nome;
+            caes[index].textoprincipal = `Raça: ${raca}`;
+            textos = [];
+            textos.push("Sexo: " + (sexo === "F" ?  "Fêmea": "Macho"));
+            const dataNascimento = new Date(nascimento);
+            let agora = new Date();
+            let anos = agora.getFullYear() - dataNascimento.getFullYear();
+            let meses = agora.getMonth() - dataNascimento.getMonth();
+            let dias = agora.getDate() - dataNascimento.getDate();
+            let format = trataDate(dataNascimento,true);
+            console.log( nascimento,format, "Anos:", anos,",Meses:", meses,",Dias:", dias );
+            const textoNascimento = format.toString;
+            textos.push("Nascimento: " +textoNascimento);
+            caes[index].outrosTextos = textos;
+
+            // dadosJson[index].textoprincipal = `${logradouro} ${nome}, ${numero} - ${bairro} - ${cidade}, ${uf} - CEP: ${cep}`;
+
+            // const celular = window.navigator.userAgent.toLocaleLowerCase().match(/android/g) == "android";
+            // if (clinica.telefones.length > 0) {
+            //     clinica.telefones.forEach(fone => {
+            //         let linkWahtssIni = "";
+            //         if (fone.tipo == 'movel') {
+            //             if (celular) {
+            //                 linkWahtssIni = `<a href="http://api.whatsapp.com/send?1=pt_BR&amp;phone=55${fone.ddd}${fone.numero}&text=Olá!%20Estou%20em%20seu%20site%2C%20pode%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer">`;
+            //             } else {
+            //                 linkWahtssIni = `<a href="https://web.whatsapp.com/send?phone=55${fone.ddd}${fone.numero}&text=Olá!%20Estou%20em%20seu%20site%2C%20pode%20me%20ajudar%3F" target="_blank" rel="noopener noreferrer">`;
+            //             }
+            //         }
+            //         const icone = fone.tipo == "fixo" ? 'fa-phone' : 'fa-whatsapp';
+
+            //         let texto = `${linkWahtssIni}<i class="fa ${icone}" aria-hidden="true"></i> (${fone.ddd}) ${fone.numero}${celular ? "</a>" : fone.tipo == 'movel' ? '</a>' : ''} `;
+            //         dadosJson[index].outrosTextos.push(texto);
+            //     });
+            // }
+
+            // const aVisitar = $(document.createElement('a'));
+            // const icone = $(document.createElement('em'));
+            // icone.addClass('fa');
+            // icone.addClass('fa-map-marker');
+            // icone.attr('aria-hidden', 'true');
+            // icone.html(' Mapa');
+            // aVisitar.attr('href', mapa);
+            // aVisitar.attr('target', 'blank');
+            // aVisitar.addClass('btn');
+            // aVisitar.addClass('btn-primary');
+            // icone.appendTo(aVisitar);
+            // dadosJson[index].outrosTextos.push(aVisitar);
+        });
+        montarListaCards(caes, $('#listaPais'));
+    });
+    delete window.jsonPais;
+</script>

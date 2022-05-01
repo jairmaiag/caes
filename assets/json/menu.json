@@ -8,6 +8,12 @@
         },
         {
             "id": 2,
+            "label": "Pais e mães",
+            "link": "pais",
+            "submenu": []
+        },
+        {
+            "id": 2,
             "label": "Filhotes",
             "link": "clinicas",
             "submenu": []
