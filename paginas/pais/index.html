@@ -6,10 +6,11 @@
         const lista = $('#listaPais');
         const { caes } = data;
         caes.forEach((cao, index) => {
-            const { id, nome, nascimento, paiId, maeId, sexo, raca, fotoprincipal, fotos, vacinas } = cao;
+            const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, vacinas } = cao;
             caes[index].titulo = nome;
-            caes[index].textoprincipal = `Raça: ${raca}`;
+            caes[index].textoprincipal = `Descrição: ${descricao}`;
             textos = [];
+            textos.push(`Raça: ${raca}`);
             textos.push("Sexo: " + (sexo === "F" ? "Fêmea" : "Macho"));
             const { toString } = trataDate(new Date(nascimento), true);
             textos.push("Nascimento: " + toString);

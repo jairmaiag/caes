@@ -9,12 +9,13 @@
         window.jsonPais.done(data => {
             const { caes } = data;
             filhotes.forEach((cao, index) => {
-                const { id, nome, nascimento, paiId, maeId, sexo, raca, fotoprincipal, fotos, vacinas } = cao;
+                const { id, nome, nascimento, paiId, maeId, sexo, raca, vacinas, descricao } = cao;
                 const pai = caes.find(p => p.id == paiId);
                 const mae = caes.find(m => m.id == maeId);
                 filhotes[index].titulo = nome;
-                filhotes[index].textoprincipal = `Raça: ${raca}`;
+                filhotes[index].textoprincipal = `Descrição: ${descricao}`;
                 textos = [];
+                textos.push(`Raça: ${raca}`);
                 textos.push("Sexo: " + (sexo === "F" ? "Fêmea" : "Macho"));
                 const { toString } = trataDate(new Date(nascimento), true);
                 textos.push("Nascimento: " + toString);
