@@ -21,7 +21,8 @@
                 textos.push("Nascimento: " + toString);
                 textos.push("Pai: " + pai.nome);
                 textos.push("Mãe: " + mae.nome);
-                textos.push("Valor: R$ " + valor+",00");
+                const real = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
+                textos.push(`Valor: ${real}`);
                 
                 filhotes[index].outrosTextos = textos;
             });
