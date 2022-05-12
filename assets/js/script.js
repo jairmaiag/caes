@@ -60,6 +60,9 @@ function findCao(id, tipo) {
         jsonCao = window.litaPais.filter(cao => {
             return cao.id == id;
         });
+        jsonCao[0].filhotes = window.litaFilhotes.filter(cao => {
+            return cao.maeId == id || cao.paiId == id;
+        });
     }else{
         jsonCao = window.litaFilhotes.filter(cao => {
             return cao.id == id;
