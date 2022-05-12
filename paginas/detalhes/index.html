@@ -1,0 +1,14 @@
+<h1 id="detalhes">Detalhes</h1>
+<script>
+    var endereco = window.location.hash;
+    var tipo = endereco.substring(2);
+    var idCao = tipo.substring(tipo.indexOf('/') + 1);
+    const cao = findCao(idCao, tipo.startsWith('filhotes'));
+    console.log(tipo);
+    console.log(cao);
+    
+    delete endereco;
+    delete tipo;
+    delete idCao;
+    delete window.jsonDadosPais;
+</script>

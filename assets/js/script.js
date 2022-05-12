@@ -2,7 +2,94 @@ window.onload = function () {
     criarMenu();
     exibeConteudo('home');
     ajustarLinkHome();
+    window.litaPais = [];
+    window.litaFilhotes = [];
+
+    window.jsonPais = $.getJSON('assets/json/caes.json');
+    window.jsonPais.done(data => {
+        const { lista } = data;
+        lista.forEach((dado, index) => {
+            const { id, nome, nascimento, paiId, maeId, sexo, raca, vacinas, descricao } = dado;
+            lista[index].linkDetalhe = `<a href='#/cao/${id}' onclick="exibeConteudo('detalhes')">`;
+            lista[index].titulo = `${lista[index].linkDetalhe}${nome}</a>`;
+            lista[index].textoprincipal = `Descrição: ${descricao}`;
+            textos = [];
+            textos.push(`Raça: ${raca}`);
+            textos.push("Sexo: " + (sexo === "F" ? "Fêmea" : "Macho"));
+            const { toString } = trataDate(new Date(nascimento), true);
+            textos.push(`Nascimento: ${toString}`);
+            lista[index].outrosTextos = textos;
+            window.litaPais.push(dado);
+        });
+    });
+
+    window.jsonFilhotes = $.getJSON('assets/json/filhotes.json');
+    window.jsonFilhotes.done(data => {
+        const { lista: filhotes } = data;
+        filhotes.forEach((cao, index) => {
+            const { id, nome, nascimento, paiId, maeId, sexo, raca, vacinas, descricao, valor } = cao;
+            const pai = findCao(paiId);
+            const mae = findCao(maeId);
+            filhotes[index].linkDetalhe = `<a href='#/filhotes/${id}' onclick="exibeConteudo('detalhes')">`;
+            filhotes[index].titulo = `${filhotes[index].linkDetalhe}${nome}</a>`;
+            filhotes[index].textoprincipal = `Descrição: ${descricao}`;
+            filhotes[index].pai = pai;
+            filhotes[index].mae = mae;
+            textos = [];
+            textos.push(`Raça: ${raca}`);
+            textos.push("Sexo: " + (sexo === "F" ? "Fêmea" : "Macho"));
+            const { toString } = trataDate(new Date(nascimento), true);
+            textos.push(`Nascimento: ${toString}`);
+            textos.push(`Pai: <a href='#/caes/${pai.id}' onclick="exibeConteudo('detalhes')">${pai.nome}</a>`);
+            textos.push(`Mãe: <a href='#/caes/${mae.id}' onclick="exibeConteudo('detalhes')">${mae.nome}</a>`);
+            const real = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
+            textos.push(`Valor: ${real}`);
+            filhotes[index].outrosTextos = textos;
+            window.litaFilhotes.push(filhotes[index]);
+        });
+    });
+    delete window.jsonPais;
+    delete window.jsonFilhotes;
 }
+function findCao(id, tipo) {
+    if (!id) {
+        return null;
+    }
+    let jsonCao;
+    if(!tipo){
+        jsonCao = window.litaPais.filter(cao => {
+            return cao.id == id;
+        });
+    }else{
+        jsonCao = window.litaFilhotes.filter(cao => {
+            return cao.id == id;
+        });
+    }
+    return jsonCao[0];
+}
+function Detalhes(tipo, id) {
+    this.id = id;
+    this.tipo = tipo;
+
+}
+Detalhes.prototype.getFilhotesPorPais = async function (id) {
+    if (!id) {
+        id = this.id;
+    }
+    try {
+        var jsonFilhotesDosPais = $.getJSON('assets/json/filhotes.json');
+        return await jsonFilhotesDosPais.done(data => {
+            const filhos = data.lista.filter(filho => {
+                return (filho.paiId == id || filho.maeId == id);
+            });
+            return filhos;
+        });
+
+    } catch (erro) {
+        return erro;
+    }
+}
+
 function CardDeck(dados, destino) {
     this.dados = dados;
     this.cardDecks = [];
@@ -40,8 +127,10 @@ CardDeck.prototype.mountCardDeck = function () {
     divCardDeck.addClass("mb-3");
     return divCardDeck;
 }
-CardDeck.prototype.mountImage = function (imagem) {
+CardDeck.prototype.mountImage = function (data) {
+    let { imagem, linkDetalhe } = data;
     const imageCard = $(document.createElement('img'));
+    const aDetalhe = $(linkDetalhe);
     if (imagem === undefined || imagem === null || imagem.length === 0) {
         imagem = {
             arquivo: 'assets/images/logo.png',
@@ -63,7 +152,8 @@ CardDeck.prototype.mountImage = function (imagem) {
         imageCard.appendTo(linkImageCard);
         return linkImageCard;
     }
-    return imageCard;
+    imageCard.appendTo(aDetalhe);
+    return aDetalhe;
 };
 CardDeck.prototype.mountCard = function (data, vazio) {
     const divCard = $(document.createElement('div'));
@@ -76,7 +166,7 @@ CardDeck.prototype.mountCard = function (data, vazio) {
         divCard.addClass("rounded");
     }
     this.mountHead(data.titulo).appendTo(divCard);
-    this.mountImage(data.imagem).appendTo(divCard);
+    this.mountImage(data).appendTo(divCard);
     this.mountBody(data.textoprincipal, data.outrosTextos).appendTo(divCard);
     return divCard;
 };
@@ -137,8 +227,9 @@ const criarParagrafoCard = function (texto) {
     return paragrafo;
 };
 
-const exibeConteudo = function (link) {
-    const pagina = $.get(`paginas/${link}/index.html`);
+const exibeConteudo = function (link, id) {
+    const endereco = `paginas/${link}/index.html`;
+    const pagina = $.get(endereco);
     pagina.done(data => {
         const pirncipal = $('main');
         pirncipal.html(data);

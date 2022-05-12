@@ -18,25 +18,12 @@
         </div>
     </div>
 </div>
+<p>
+    Lista com os pais e mães dos filhtos. <br>
+    Clique no nome ou na foto para mais detalhes.
+</p>
 <div class="container-fluid" id="listaPais"></div>
 <script>
-    window.jsonPais = $.getJSON('assets/json/caes.json');
-    window.jsonPais.done(data => {
-        const lista = $('#listaPais');
-        const { caes } = data;
-        caes.forEach((cao, index) => {
-            const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, vacinas } = cao;
-            caes[index].titulo = nome;
-            caes[index].textoprincipal = `Descrição: ${descricao}`;
-            textos = [];
-            textos.push(`Raça: ${raca}`);
-            textos.push("Sexo: " + (sexo === "F" ? "Fêmea" : "Macho"));
-            const { toString } = trataDate(new Date(nascimento), true);
-            textos.push("Nascimento: " + toString);
-            caes[index].outrosTextos = textos;
-        });
-        montarCarrossel('divCarrosselPais','carrosselfrida.json');
-        montarListaCards(caes, $('#listaPais'));
-    });
-    delete window.jsonPais;
+    montarCarrossel('divCarrosselPais','carrosselfrida.json');
+    montarListaCards(window.litaPais, $('#listaPais'));
 </script>
