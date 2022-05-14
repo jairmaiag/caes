@@ -9,7 +9,7 @@ window.onload = function () {
     window.jsonPais.done(data => {
         const { lista } = data;
         lista.forEach((dado, index) => {
-            const { id, nome, nascimento, paiId, maeId, sexo, raca, vacinas, descricao } = dado;
+            const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao } = dado;
             lista[index].linkDetalhe = `<a href='#/cao/${id}' onclick="exibeConteudo('detalhes')">`;
             lista[index].titulo = `${lista[index].linkDetalhe}${nome}</a>`;
             lista[index].textoprincipal = `Descrição: ${descricao}`;
@@ -27,7 +27,7 @@ window.onload = function () {
     window.jsonFilhotes.done(data => {
         const { lista: filhotes } = data;
         filhotes.forEach((cao, index) => {
-            const { id, nome, nascimento, paiId, maeId, sexo, raca, vacinas, descricao, valor } = cao;
+            const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor } = cao;
             const pai = findCao(paiId);
             const mae = findCao(maeId);
             filhotes[index].linkDetalhe = `<a href='#/filhotes/${id}' onclick="exibeConteudo('detalhes')">`;
@@ -56,41 +56,93 @@ function findCao(id, tipo) {
         return null;
     }
     let jsonCao;
-    if(!tipo){
-        jsonCao = window.litaPais.filter(cao => {
-            return cao.id == id;
-        });
-        jsonCao[0].filhotes = window.litaFilhotes.filter(cao => {
-            return cao.maeId == id || cao.paiId == id;
-        });
-    }else{
-        jsonCao = window.litaFilhotes.filter(cao => {
-            return cao.id == id;
-        });
+    if (!tipo) {
+        jsonCao = window.litaPais.filter(cao => cao.id == id)[0];
+    } else {
+        jsonCao = window.litaFilhotes.filter(cao => cao.id == id)[0];
     }
-    return jsonCao[0];
+    return jsonCao;
 }
-function Detalhes(tipo, id) {
-    this.id = id;
-    this.tipo = tipo;
+function findFilhotes(id, tipo) {
+    return window.litaFilhotes.filter(cao => tipo ? cao.paiId === id : cao.maeId === id);
+}
+function Detalhes(dados, destino) {
+    this.dados = dados;
+    this.destino = $(`#${destino}`);
 
 }
-Detalhes.prototype.getFilhotesPorPais = async function (id) {
-    if (!id) {
-        id = this.id;
-    }
-    try {
-        var jsonFilhotesDosPais = $.getJSON('assets/json/filhotes.json');
-        return await jsonFilhotesDosPais.done(data => {
-            const filhos = data.lista.filter(filho => {
-                return (filho.paiId == id || filho.maeId == id);
-            });
-            return filhos;
-        });
+Detalhes.prototype.mount = function () {
+    const tabela = $('#tabBodyCao');
+    const trbody = $(document.createElement('tr'));
+    const { nome, nascimento, sexo, raca, descricao, pai, mae, filhotes } = this.dados;
+    const descri = $('#descricao');
+    descri.html(descricao);
 
-    } catch (erro) {
-        return erro;
+    criarTh(nome, trbody);
+    const { toString } = trataDate(new Date(nascimento), true);
+    criarTd(toString, trbody);
+    criarTd((sexo === "F" ? "Fêmea" : "Macho"), trbody);
+    criarTd(raca, trbody);
+
+    if (pai) {
+        criarTd(pai.nome, trbody);
     }
+    if (mae) {
+        criarTd(mae.nome, trbody);
+    }
+    if (filhotes && filhotes.length > 0) {
+        const div = $('#divFilhotes');
+        div.removeClass('ocultar');
+        const tabF = $('#tabFilhotes');
+        tabF.removeClass('ocultar');
+        const bodyF = $('#tabBodyFilho');
+        filhotes.forEach(f => {
+            const tr = $(document.createElement('tr'));
+            const linkNome = `${f.linkDetalhe}${f.nome}</a>`;
+            criarTh(linkNome, tr);
+            const { toString } = trataDate(new Date(f.nascimento), true);
+            criarTd(toString, tr);
+            criarTd((f.sexo === "F" ? "Fêmea" : "Macho"), tr);
+            criarTd(f.raca, tr);
+            criarTd(f.pai.nome, tr);
+            criarTd(f.mae.nome, tr);
+            tr.appendTo(bodyF);
+        });
+    }
+    trbody.appendTo(tabela);
+    this.fotos();
+}
+Detalhes.prototype.fotos = function () {
+    const divFotos = $('#divFotos');
+    const {  imagens } = this.dados;
+    if (imagens && imagens.length > 0) {
+        imagens.forEach(im => {
+            const image = criarImage(im);
+            image.addClass('mr-3');
+            image.addClass('mt-3');
+            image.appendTo(divFotos);
+        });
+    }
+}
+function criarImage(imagem) {
+    const imagePrincipal = $(document.createElement('img'));
+    imagePrincipal.addClass('rounded');
+    imagePrincipal.attr('width', imagem.largura);
+    imagePrincipal.attr('height', imagem.altura);
+    imagePrincipal.attr('src', imagem.arquivo);
+    imagePrincipal.attr('alt', imagem.alt);
+    return imagePrincipal;
+}
+function criarTd(conteudo, tr) {
+    const td = $(document.createElement('td'));
+    td.html(conteudo);
+    td.appendTo(tr);
+}
+function criarTh(conteudo, tbody) {
+    const th = $(document.createElement('th'));
+    th.attr('scope', 'row');
+    th.html(conteudo);
+    th.appendTo(tbody);
 }
 
 function CardDeck(dados, destino) {

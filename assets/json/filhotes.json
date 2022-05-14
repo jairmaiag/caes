@@ -14,7 +14,14 @@
                 "arquivo": "assets/images/caes/senhordosaneis/senhordosaneis01.jpeg",
                 "alt": "Senhor dos aneis"
             },
-            "imagens": [],
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/senhordosaneis/senhordosaneis01.jpeg",
+                    "alt": "Senhor dos aneis"
+                }
+            ],
             "vacinas": [],
             "valor": 600.00,
             "descricao": "Brincalhão, ativo e muito esperto."
@@ -33,7 +40,14 @@
                 "arquivo": "assets/images/caes/mascarado/mascarado01.jpeg",
                 "alt": "Mascarado"
             },
-            "imagens": [],
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/mascarado/mascarado01.jpeg",
+                    "alt": "Mascarado"
+                }
+            ],
             "vacinas": [],
             "valor": 600.00,
             "descricao": "Adora um colo e morder o Thor."
@@ -52,7 +66,12 @@
                 "arquivo": "assets/images/caes/miniodin/miniodin01.jpeg",
                 "alt": "Thor"
             },
-            "imagens": [],
+            "imagens": [{
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/miniodin/miniodin01.jpeg",
+                "alt": "Thor"
+            }],
             "vacinas": [],
             "valor": 600.00,
             "descricao": "Dorminhoco e comilão. Gosta de uma luta com o Mascarado."
@@ -71,7 +90,14 @@
                 "arquivo": "assets/images/caes/meia/meia01.jpeg",
                 "alt": "Pé de meia"
             },
-            "imagens": [],
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/meia/meia01.jpeg",
+                    "alt": "Pé de meia"
+                }
+            ],
             "vacinas": [],
             "valor": 900.00,
             "descricao": "Muito meiga, vive ao lado da irmã Ursinho."
@@ -90,7 +116,14 @@
                 "arquivo": "assets/images/caes/ursinho/ursinho01.jpeg",
                 "alt": "Urisinho"
             },
-            "imagens": [],
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/ursinho/ursinho01.jpeg",
+                    "alt": "Urisinho"
+                }
+            ],
             "vacinas": [],
             "valor": 900.00,
             "descricao": "Gosta de ficar mordendo os dedos do pé de quem estiver por perto."
@@ -123,7 +156,14 @@
                 "arquivo": "assets/images/caes/morena/morena01.jpeg",
                 "alt": "Morena"
             },
-            "imagens": [],
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/morena/morena01.jpeg",
+                    "alt": "Morena"
+                }
+            ],
             "vacinas": [],
             "valor": 2500.00,
             "descricao": "Adora dormir de barriga para cima e ser beijada."
@@ -144,7 +184,7 @@
         },
         {
             "id": 8,
-            "nome": "Nevasca",
+            "nome": "Silver",
             "nascimento": "2022-04-22T03:00:00.000Z",
             "paiId": 7,
             "maeId": 10,
@@ -184,7 +224,12 @@
                 "arquivo": "assets/images/caes/sabado/sabado01.jpeg",
                 "alt": "sabado 01"
             },
-            "imagens": [],
+            "imagens": [{
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/sabado/sabado01.jpeg",
+                "alt": "sabado 01"
+            }],
             "vacinas": [],
             "valor": 600.00,
             "descricao": "Tem uma cara bem engraçada."
@@ -203,7 +248,12 @@
                 "arquivo": "assets/images/caes/domingo/domingo01.jpeg",
                 "alt": "domingo 01"
             },
-            "imagens": [],
+            "imagens": [{
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/domingo/domingo01.jpeg",
+                "alt": "domingo 01"
+            }],
             "vacinas": [],
             "valor": 600.00,
             "descricao": "O menor da ninhada."

@@ -8,12 +8,7 @@
             "maeId": null,
             "sexo": "M",
             "raca": "Shih-tzu",
-            "imagem": {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/logo.png",
-                "alt": "odin 01"
-            },
+            "imagem": null,
             "imagens": [],
             "vacinas": [],
             "descricao": "Gosta de receber os donos quando chegam em casa."
@@ -26,12 +21,7 @@
             "maeId": null,
             "sexo": "F",
             "raca": "Shih-tzu",
-            "imagem": {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/logo.png",
-                "alt": "morena 01"
-            },
+            "imagem": null,
             "imagens": [],
             "vacinas": [],
             "descricao": "Meiga e esbelta, tem um latido muito agradável e engraçado."
@@ -44,12 +34,7 @@
             "maeId": null,
             "sexo": "F",
             "raca": "Shih-tzu",
-            "imagem": {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/logo.png",
-                "alt": "morena 01"
-            },
+            "imagem": null,
             "imagens": [],
             "vacinas": [],
             "descricao": "Arranha os potes de água quando estão vazios."
@@ -62,12 +47,7 @@
             "maeId": null,
             "sexo": "F",
             "raca": "Shih-tzu",
-            "imagem": {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/logo.png",
-                "alt": "morena 01"
-            },
+            "imagem": null,
             "imagens": [],
             "vacinas": [],
             "descricao": "Geniosa. Quando toma banho fica com um humor terrível."
@@ -80,12 +60,7 @@
             "maeId": null,
             "sexo": "F",
             "raca": "Shih-tzu",
-            "imagem": {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/logo.png",
-                "alt": "morena 01"
-            },
+            "imagem": null,
             "imagens": [],
             "vacinas": [],
             "descricao": "Um amor, sempre feliz e disposta a receber um chamego."
@@ -98,12 +73,7 @@
             "maeId": null,
             "sexo": "F",
             "raca": "Shih-tzu",
-            "imagem": {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/logo.png",
-                "alt": "morena 01"
-            },
+            "imagem": null,
             "imagens": [],
             "vacinas": [],
             "descricao": "Muito esperta, vive fuçando o quintal cavando buracos."
@@ -120,9 +90,18 @@
                 "altura": "400",
                 "largura": "400",
                 "arquivo": "assets/images/caes/conan/conan01.jpg",
-                "alt": "conan 01"
+                "alt": "Conan",
+                "link": ""
             },
-            "imagens": [],
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "400",
+                    "arquivo": "assets/images/caes/conan/conan01.jpg",
+                    "alt": "Conan",
+                    "link": ""
+                }
+            ],
             "vacinas": [],
             "descricao": "Muito engraçado! Quando olha para as pessoas ele dobra a cabeça."
         },
@@ -134,12 +113,7 @@
             "maeId": null,
             "sexo": "F",
             "raca": "Spitz Alemão",
-            "imagem": {
-                "altura": "400",
-                "largura": "400",
-                "arquivo": "assets/images/logo.png",
-                "alt": "morena 01"
-            },
+            "imagem": null,
             "imagens": [],
             "vacinas": [],
             "descricao": "Paqueradora com os donos, mas extremamente ciumenta com o Conan."
@@ -161,6 +135,14 @@
                 "idmodal": "#modalExemplo"
             },
             "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "400",
+                    "arquivo": "assets/images/caes/frida/frida01.jpg",
+                    "alt": "Frida",
+                    "link": "",
+                    "idmodal": "#modalExemplo"
+                },
                 {
                     "id": 2,
                     "altura": "400",
@@ -206,12 +188,7 @@
             "maeId": null,
             "sexo": "F",
             "raca": "Spitz Alemão",
-            "imagem": {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/logo.png",
-                "alt": "morena 01"
-            },
+            "imagem": null,
             "imagens": [],
             "vacinas": [],
             "descricao": "Grandona e desajeitada, tem a Frida como parceira de bagunça."

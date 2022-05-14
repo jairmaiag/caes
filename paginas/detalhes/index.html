@@ -1,15 +1,54 @@
 <div class="container-fluid" id="divDetalhes">
     <h1 id="detalhes">Detalhes</h1>
+    <p>
+        Detalhes sobre o cão.
+    </p>
+    <p id="descricao"></p>
+    <table id="tabDados" class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nome</td>
+                <th scope="col">Nascimento</td>
+                <th scope="col">Sexo</td>
+                <th scope="col">Raça</td>
+                <th scope="col">Pai</td>
+                <th scope="col">Mãe</td>
+            </tr>
+        </thead>
+        <tbody id="tabBodyCao"></tbody>
+    </table>
+    <div id="divFilhotes" class="ocultar">
+        <H3>Filhotes</H3>
+        <table id="tabFilhotes" class="table ocultar">
+            <thead>
+                <tr>
+                    <th scope="col">Nome</td>
+                    <th scope="col">Nascimento</td>
+                    <th scope="col">Sexo</td>
+                    <th scope="col">Raça</td>
+                    <th scope="col">Pai</td>
+                    <th scope="col">Mãe</td>
+                </tr>
+            </thead>
+            <tbody id="tabBodyFilho"></tbody>
+        </table>
+    </div>
+    <div id="divFotos" class="text-center"></div>
+
 </div>
 <script>
     var endereco = window.location.hash;
     var tipo = endereco.substring(2);
     var idCao = tipo.substring(tipo.indexOf('/') + 1);
-    var cao = findCao(idCao, tipo.startsWith('filhotes'));
-    console.log(cao);
-    
+    var filhotes = tipo.startsWith('filhotes');
+    var cao = findCao(idCao, filhotes);
+    if (!filhotes) {
+        cao.filhotes = findFilhotes(cao.id, cao.sexo === 'M');
+    }
+    new Detalhes(cao, 'divDetalhes').mount();
     delete endereco;
     delete tipo;
     delete idCao;
     delete cao;
+    delete filhotes;
 </script>
