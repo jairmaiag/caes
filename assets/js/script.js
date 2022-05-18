@@ -9,7 +9,7 @@ window.onload = function () {
     window.jsonPais.done(data => {
         const { lista } = data;
         lista.forEach((dado, index) => {
-            const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao } = dado;
+            const { id, nome, nascimento, sexo, raca, descricao } = dado;
             lista[index].linkDetalhe = `<a href='#/cao/${id}' onclick="exibeConteudo('detalhes')">`;
             lista[index].titulo = `${lista[index].linkDetalhe}${nome}</a>`;
             lista[index].textoprincipal = `Descrição: ${descricao}`;
@@ -27,25 +27,27 @@ window.onload = function () {
     window.jsonFilhotes.done(data => {
         const { lista: filhotes } = data;
         filhotes.forEach((cao, index) => {
-            const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor } = cao;
-            const pai = findCao(paiId);
-            const mae = findCao(maeId);
-            filhotes[index].linkDetalhe = `<a href='#/filhotes/${id}' onclick="exibeConteudo('detalhes')">`;
-            filhotes[index].titulo = `${filhotes[index].linkDetalhe}${nome}</a>`;
-            filhotes[index].textoprincipal = `Descrição: ${descricao}`;
-            filhotes[index].pai = pai;
-            filhotes[index].mae = mae;
-            textos = [];
-            textos.push(`Raça: ${raca}`);
-            textos.push("Sexo: " + (sexo === "F" ? "Fêmea" : "Macho"));
-            const { toString } = trataDate(new Date(nascimento), true);
-            textos.push(`Nascimento: ${toString}`);
-            textos.push(`Pai: <a href='#/caes/${pai.id}' onclick="exibeConteudo('detalhes')">${pai.nome}</a>`);
-            textos.push(`Mãe: <a href='#/caes/${mae.id}' onclick="exibeConteudo('detalhes')">${mae.nome}</a>`);
-            const real = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
-            textos.push(`Valor: ${real}`);
-            filhotes[index].outrosTextos = textos;
-            window.litaFilhotes.push(filhotes[index]);
+            const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor, vendido } = cao;
+            if(!vendido){
+                const pai = findCao(paiId);
+                const mae = findCao(maeId);
+                filhotes[index].linkDetalhe = `<a href='#/filhotes/${id}' onclick="exibeConteudo('detalhes')">`;
+                filhotes[index].titulo = `${filhotes[index].linkDetalhe}${nome}</a>`;
+                filhotes[index].textoprincipal = `Descrição: ${descricao}`;
+                filhotes[index].pai = pai;
+                filhotes[index].mae = mae;
+                textos = [];
+                textos.push(`Raça: ${raca}`);
+                textos.push("Sexo: " + (sexo === "F" ? "Fêmea" : "Macho"));
+                const { toString } = trataDate(new Date(nascimento), true);
+                textos.push(`Nascimento: ${toString}`);
+                textos.push(`Pai: <a href='#/caes/${pai.id}' onclick="exibeConteudo('detalhes')">${pai.nome}</a>`);
+                textos.push(`Mãe: <a href='#/caes/${mae.id}' onclick="exibeConteudo('detalhes')">${mae.nome}</a>`);
+                const real = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
+                textos.push(`Valor: ${real}`);
+                filhotes[index].outrosTextos = textos;
+                window.litaFilhotes.push(filhotes[index]);
+            }
         });
     });
     delete window.jsonPais;

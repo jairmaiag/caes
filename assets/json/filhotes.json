@@ -7,6 +7,7 @@
             "paiId": 1,
             "maeId": 6,
             "sexo": "M",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": {
                 "altura": "400",
@@ -33,6 +34,7 @@
             "paiId": 1,
             "maeId": 6,
             "sexo": "M",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": {
                 "altura": "400",
@@ -59,6 +61,7 @@
             "paiId": 1,
             "maeId": 6,
             "sexo": "M",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": {
                 "altura": "400",
@@ -66,12 +69,14 @@
                 "arquivo": "assets/images/caes/miniodin/miniodin01.jpeg",
                 "alt": "Thor"
             },
-            "imagens": [{
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/miniodin/miniodin01.jpeg",
-                "alt": "Thor"
-            }],
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/miniodin/miniodin01.jpeg",
+                    "alt": "Thor"
+                }
+            ],
             "vacinas": [],
             "valor": 600.00,
             "descricao": "Dorminhoco e comilão. Gosta de uma luta com o Mascarado."
@@ -83,6 +88,7 @@
             "paiId": 1,
             "maeId": 6,
             "sexo": "F",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": {
                 "altura": "400",
@@ -109,6 +115,7 @@
             "paiId": 1,
             "maeId": 6,
             "sexo": "F",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": {
                 "altura": "400",
@@ -135,6 +142,7 @@
             "paiId": 7,
             "maeId": 8,
             "sexo": "F",
+            "vendido": false,
             "raca": "Spitz Alemão",
             "imagem": "",
             "imagens": [],
@@ -149,6 +157,7 @@
             "paiId": 7,
             "maeId": 8,
             "sexo": "F",
+            "vendido": false,
             "raca": "Spitz Alemão",
             "imagem": {
                 "altura": "400",
@@ -175,6 +184,7 @@
             "paiId": 7,
             "maeId": 8,
             "sexo": "F",
+            "vendido": false,
             "raca": "Spitz Alemão",
             "imagem": "",
             "imagens": [],
@@ -189,6 +199,7 @@
             "paiId": 7,
             "maeId": 10,
             "sexo": "M",
+            "vendido": false,
             "raca": "Spitz Alemão",
             "imagem": "",
             "imagens": [],
@@ -203,6 +214,7 @@
             "paiId": 7,
             "maeId": 10,
             "sexo": "F",
+            "vendido": false,
             "raca": "Spitz Alemão",
             "imagem": "",
             "imagens": [],
@@ -217,6 +229,7 @@
             "paiId": 1,
             "maeId": 2,
             "sexo": "M",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": {
                 "altura": "400",
@@ -224,12 +237,14 @@
                 "arquivo": "assets/images/caes/sabado/sabado01.jpeg",
                 "alt": "sabado 01"
             },
-            "imagens": [{
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/sabado/sabado01.jpeg",
-                "alt": "sabado 01"
-            }],
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/sabado/sabado01.jpeg",
+                    "alt": "sabado 01"
+                }
+            ],
             "vacinas": [],
             "valor": 600.00,
             "descricao": "Tem uma cara bem engraçada."
@@ -241,6 +256,7 @@
             "paiId": 1,
             "maeId": 2,
             "sexo": "M",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": {
                 "altura": "400",
@@ -248,12 +264,14 @@
                 "arquivo": "assets/images/caes/domingo/domingo01.jpeg",
                 "alt": "domingo 01"
             },
-            "imagens": [{
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/domingo/domingo01.jpeg",
-                "alt": "domingo 01"
-            }],
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/domingo/domingo01.jpeg",
+                    "alt": "domingo 01"
+                }
+            ],
             "vacinas": [],
             "valor": 600.00,
             "descricao": "O menor da ninhada."
@@ -265,6 +283,7 @@
             "paiId": 1,
             "maeId": 2,
             "sexo": "F",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": "",
             "imagens": [],
@@ -279,6 +298,7 @@
             "paiId": 1,
             "maeId": 2,
             "sexo": "F",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": "",
             "imagens": [],
@@ -293,6 +313,7 @@
             "paiId": 1,
             "maeId": 2,
             "sexo": "F",
+            "vendido": false,
             "raca": "Shih-tzu",
             "imagem": "",
             "imagens": [],
