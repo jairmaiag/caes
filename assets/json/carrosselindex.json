@@ -2,57 +2,24 @@
     "imagens": [
         {
             "id": 1,
-            "nome": "senhordosaneis01.jpeg",
-            "local": "assets/images/caes/senhordosaneis/",
+            "nome": "conan01.jpg",
+            "local": "assets/images/caes/conan/",
             "largura": "400",
             "altura": "200",
-            "textoAlternativo": "Senhor dos aneis",
-            "tituloSlide": "Senhor dos aneis",
-            "descricaoSlide": "Brincalhão, ativo e muito esperto.",
+            "textoAlternativo": "Conan",
+            "tituloSlide": "Conan",
+            "descricaoSlide": "Gosta de uma brincadeira.",
             "link": ""
         },
         {
             "id": 2,
-            "nome": "mascarado01.jpeg",
-            "local": "assets/images/caes/mascarado/",
+            "nome": "frida01.jpg",
+            "local": "assets/images/caes/frida/",
             "largura": "400",
             "altura": "200",
-            "textoAlternativo": "Mascarado",
-            "tituloSlide": "Mascarado",
-            "descricaoSlide": "Adora um colo e morder o Mini Odin.",
-            "link": ""
-        },
-        {
-            "id": 3,
-            "nome": "miniodin01.jpeg",
-            "local": "assets/images/caes/miniodin/",
-            "largura": "400",
-            "altura": "200",
-            "textoAlternativo": "Mini Odin",
-            "tituloSlide": "Mini Odin",
-            "descricaoSlide": "Gosta de uma luta com o Mascarado.",
-            "link": ""
-        },
-        {
-            "id": 4,
-            "nome": "meia01.jpeg",
-            "local": "assets/images/caes/meia/",
-            "largura": "400",
-            "altura": "200",
-            "textoAlternativo": "Pé de meia",
-            "tituloSlide": "Pé de meia",
-            "descricaoSlide": "Personalidade forte.",
-            "link": ""
-        },
-        {
-            "id": 5,
-            "nome": "ursinho01.jpeg",
-            "local": "assets/images/caes/ursinho/",
-            "largura": "400",
-            "altura": "200",
-            "textoAlternativo": "Urisinho",
-            "tituloSlide": "Urisinho",
-            "descricaoSlide": "Meiga e muito carinhosa.",
+            "textoAlternativo": "Frida",
+            "tituloSlide": "Frida",
+            "descricaoSlide": "Gosta de guardar a casa.",
             "link": ""
         }
     ]
