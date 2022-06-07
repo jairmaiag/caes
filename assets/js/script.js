@@ -508,3 +508,7 @@ const trataDate = function (date, comIdade) {
         dias: dias
     }
 }
+const ocultar = function(id){
+    const obj = $(id);
+    obj.addClass('ocultar')
+}

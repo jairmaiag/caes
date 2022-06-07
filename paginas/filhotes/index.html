@@ -1,10 +1,18 @@
 <div class="container-fluid" id="listaFilhotes">
     <h1 id="filhotes">Filhotes</h1>
-    <p>
+    <p id="textoFilhote">
         Lista dos filhotes.<br>
         Clique no nome ou na foto para mais detalhes.
     </p>
+    <div class="alert alert-danger" role="alert" id="alerta">
+        Estamos sem filhotes no momento!
+    </div>
 </div>
 <script>
-    montarListaCards(window.litaFilhotes, $('#listaFilhotes'));
+    if(window.litaFilhotes.length !== 0){
+        ocultar('#alerta')
+        montarListaCards(window.litaFilhotes, $('#listaFilhotes'));
+    }else{
+        ocultar('#textoFilhote')
+    }
 </script>
