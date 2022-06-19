@@ -41,7 +41,7 @@
     var tipo = endereco.substring(2);
     var idCao = tipo.substring(tipo.indexOf('/') + 1);
     var filhotes = tipo.startsWith('filhotes');
-    var cao = findCao(idCao, filhotes);
+    var cao = findCao(idCao, (filhotes ? window.listaFilhotes : window.listaPais));
     if (!filhotes) {
         cao.filhotes = findFilhotes(cao.id, cao.sexo === 'M');
     }

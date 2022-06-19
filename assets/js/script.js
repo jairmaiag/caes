@@ -1,72 +1,80 @@
-window.onload = function () {
+$(() => {
     criarMenu();
     exibeConteudo('home');
     ajustarLinkHome();
-    window.litaPais = [];
-    window.litaFilhotes = [];
+    window.listaPais = [];
+    window.listaFilhotes = [];
 
     window.jsonPais = $.getJSON('assets/json/caes.json');
     window.jsonPais.done(data => {
         const { lista } = data;
-        lista.forEach((dado, index) => {
-            const { id, nome, nascimento, sexo, raca, descricao } = dado;
-            lista[index].linkDetalhe = `<a href='#/cao/${id}' onclick="exibeConteudo('detalhes')">`;
-            lista[index].titulo = `${lista[index].linkDetalhe}${nome}</a>`;
-            lista[index].textoprincipal = `Descrição: ${descricao}`;
-            textos = [];
-            textos.push(`Raça: ${raca}`);
-            textos.push("Sexo: " + (sexo === "F" ? "Fêmea" : "Macho"));
-            const { toString } = trataDate(new Date(nascimento), true);
-            textos.push(`Nascimento: ${toString}`);
-            lista[index].outrosTextos = textos;
-            window.litaPais.push(dado);
-        });
+        window.listaPais = lista
+            .filter(cao => !cao.vendido)
+            .map(dado => {
+                return montarObjetoCao(dado, lista, false);
+            });
     });
 
     window.jsonFilhotes = $.getJSON('assets/json/filhotes.json');
     window.jsonFilhotes.done(data => {
         const { lista: filhotes } = data;
-        filhotes.forEach((cao, index) => {
-            const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor, vendido } = cao;
-            if(!vendido){
-                const pai = findCao(paiId);
-                const mae = findCao(maeId);
-                filhotes[index].linkDetalhe = `<a href='#/filhotes/${id}' onclick="exibeConteudo('detalhes')">`;
-                filhotes[index].titulo = `${filhotes[index].linkDetalhe}${nome}</a>`;
-                filhotes[index].textoprincipal = `Descrição: ${descricao}`;
-                filhotes[index].pai = pai;
-                filhotes[index].mae = mae;
-                textos = [];
-                textos.push(`Raça: ${raca}`);
-                textos.push("Sexo: " + (sexo === "F" ? "Fêmea" : "Macho"));
-                const { toString } = trataDate(new Date(nascimento), true);
-                textos.push(`Nascimento: ${toString}`);
-                textos.push(`Pai: <a href='#/caes/${pai.id}' onclick="exibeConteudo('detalhes')">${pai.nome}</a>`);
-                textos.push(`Mãe: <a href='#/caes/${mae.id}' onclick="exibeConteudo('detalhes')">${mae.nome}</a>`);
-                const real = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
-                textos.push(`Valor: ${real}`);
-                filhotes[index].outrosTextos = textos;
-                window.litaFilhotes.push(filhotes[index]);
-            }
-        });
+        window.listaFilhotes = filhotes
+            .filter(cao => !cao.vendido)
+            .map(dado => {
+                return montarObjetoCao(dado, window.listaPais, true);
+            });
     });
     delete window.jsonPais;
     delete window.jsonFilhotes;
+});
+
+function montarObjetoCao(dado, lista, filhote) {
+    const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor } = dado;
+    const pai = findCao(paiId, lista);
+    const mae = findCao(maeId, lista);
+    const textos = [];
+    textos.push(`Raça: ${raca}`);
+    textos.push(`Sexo: ${montarSexo(sexo)}`);
+    textos.push(montarData('Nascimento',nascimento));
+    if (pai) {
+        textos.push(`Pai: <a href='#/${filhote ? 'cao' : 'filhotes'}/${pai.id}' onclick="exibeConteudo('detalhes')">${pai.nome}</a>`);
+    }
+    if (mae) {
+        textos.push(`Mãe: <a href='#/${filhote ? 'cao' : 'filhotes'}/${mae.id}' onclick="exibeConteudo('detalhes')">${mae.nome}</a>`);
+    }
+    if (filhote) {
+        const real = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(valor);
+        textos.push(`Valor: ${real}`);
+    }
+    const linkDetalhe = `<a href='#/${filhote ? 'filhotes' : 'cao'}/${id}' onclick="exibeConteudo('detalhes')">`;
+    return {
+        ...dado,
+        pai,
+        mae,
+        linkDetalhe,
+        titulo: `${linkDetalhe}${nome}</a>`,
+        textoprincipal: `Descrição: ${descricao}`,
+        textos,
+        outrosTextos: textos
+    }
 }
-function findCao(id, tipo) {
+
+function montarSexo(sexo) {
+    let retorno = 'Fêmea';
+    if (!sexo) {
+        return retorno
+    }
+    retorno = sexo === "F" ? "Fêmea" : "Macho"
+    return retorno;
+}
+function findCao(id, lista) {
     if (!id) {
         return null;
     }
-    let jsonCao;
-    if (!tipo) {
-        jsonCao = window.litaPais.filter(cao => cao.id == id)[0];
-    } else {
-        jsonCao = window.litaFilhotes.filter(cao => cao.id == id)[0];
-    }
-    return jsonCao;
+    return lista.filter(cao => cao.id == id)[0];
 }
 function findFilhotes(id, tipo) {
-    return window.litaFilhotes.filter(cao => tipo ? cao.paiId === id : cao.maeId === id);
+    return window.listaFilhotes.filter(cao => tipo ? cao.paiId === id : cao.maeId === id);
 }
 function Detalhes(dados, destino) {
     this.dados = dados;
@@ -83,15 +91,10 @@ Detalhes.prototype.mount = function () {
     criarTh(nome, trbody);
     const { toString } = trataDate(new Date(nascimento), true);
     criarTd(toString, trbody);
-    criarTd((sexo === "F" ? "Fêmea" : "Macho"), trbody);
+    criarTd(montarSexo(sexo), trbody);
     criarTd(raca, trbody);
-
-    if (pai) {
-        criarTd(pai.nome, trbody);
-    }
-    if (mae) {
-        criarTd(mae.nome, trbody);
-    }
+    criarTd(pai?.nome, trbody);
+    criarTd(mae?.nome, trbody);
     if (filhotes && filhotes.length > 0) {
         const div = $('#divFilhotes');
         div.removeClass('ocultar');
@@ -104,7 +107,7 @@ Detalhes.prototype.mount = function () {
             criarTh(linkNome, tr);
             const { toString } = trataDate(new Date(f.nascimento), true);
             criarTd(toString, tr);
-            criarTd((f.sexo === "F" ? "Fêmea" : "Macho"), tr);
+            criarTd(montarSexo(f.sexo), tr);
             criarTd(f.raca, tr);
             criarTd(f.pai.nome, tr);
             criarTd(f.mae.nome, tr);
@@ -116,7 +119,7 @@ Detalhes.prototype.mount = function () {
 }
 Detalhes.prototype.fotos = function () {
     const divFotos = $('#divFotos');
-    const {  imagens } = this.dados;
+    const { imagens } = this.dados;
     if (imagens && imagens.length > 0) {
         imagens.forEach(im => {
             const image = criarImage(im);
@@ -135,12 +138,12 @@ function criarImage(imagem) {
     imagePrincipal.attr('alt', imagem.alt);
     return imagePrincipal;
 }
-function criarTd(conteudo, tr) {
+function criarTd(conteudo = "Não informado", tr) {
     const td = $(document.createElement('td'));
     td.html(conteudo);
     td.appendTo(tr);
 }
-function criarTh(conteudo, tbody) {
+function criarTh(conteudo = "Não informado", tbody) {
     const th = $(document.createElement('th'));
     th.attr('scope', 'row');
     th.html(conteudo);
@@ -508,7 +511,11 @@ const trataDate = function (date, comIdade) {
         dias: dias
     }
 }
-const ocultar = function(id){
+const montarData = function(titulo, data){
+    const { toString } = trataDate(new Date(data), true);
+    return `${titulo}: ${toString}`;
+}
+const ocultar = function (id) {
     const obj = $(id);
     obj.addClass('ocultar')
 }
