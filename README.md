@@ -1,5 +1,5 @@
 # Cães :brazil:
-<a href="https://html.spec.whatwg.org/multipage/" alt="html5" target="_blank">
+<a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" alt="html5" target="_blank">
 <img src="https://img.shields.io/badge/HTML5-d84924?&logo=HTML5&logoColor=white&style=flat" />
 </a>  
 <a href="https://www.w3c.br/Cursos/CursoCSS3/" alt="css" target="_blank">
