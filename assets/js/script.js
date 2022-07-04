@@ -2,34 +2,40 @@ $(() => {
     criarMenu();
     exibeConteudo('home');
     ajustarLinkHome();
+    window.listaProprietarios = [];
     window.listaPais = [];
     window.listaFilhotes = [];
+    const dirJson = 'assets/json/';
 
-    window.jsonPais = $.getJSON('assets/json/caes.json');
+    window.jsonProprietarios = $.getJSON(`${dirJson}proprietarios.json`);
+    window.jsonProprietarios.done(data => {
+        const { lista } = data;
+        window.listaProprietarios = lista.map(dado => dado);
+    });
+    
+    window.jsonPais = $.getJSON(`${dirJson}caes.json`);
     window.jsonPais.done(data => {
         const { lista } = data;
         window.listaPais = lista
             .filter(cao => !cao.vendido)
-            .map(dado => {
-                return montarObjetoCao(dado, lista, false);
-            });
+            .map(dado => montarObjetoCao(dado, lista, false));
     });
 
-    window.jsonFilhotes = $.getJSON('assets/json/filhotes.json');
+    window.jsonFilhotes = $.getJSON(`${dirJson}filhotes.json`);
     window.jsonFilhotes.done(data => {
         const { lista: filhotes } = data;
         window.listaFilhotes = filhotes
             .filter(cao => !cao.vendido)
-            .map(dado => {
-                return montarObjetoCao(dado, window.listaPais, true);
-            });
+            .map(dado => montarObjetoCao(dado, window.listaPais, true));
     });
+    delete window.jsonProprietarios;
     delete window.jsonPais;
     delete window.jsonFilhotes;
 });
 
 function montarObjetoCao(dado, lista, filhote) {
-    const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor } = dado;
+    const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor, proprietarioId } = dado;
+    const proprietario = findProprietario(proprietarioId);
     const pai = findCao(paiId, lista);
     const mae = findCao(maeId, lista);
     const textos = [];
@@ -55,7 +61,8 @@ function montarObjetoCao(dado, lista, filhote) {
         titulo: `${linkDetalhe}${nome}</a>`,
         textoprincipal: `Descrição: ${descricao}`,
         textos,
-        outrosTextos: textos
+        outrosTextos: textos,
+        proprietario
     }
 }
 
@@ -72,6 +79,9 @@ function findCao(id, lista) {
         return null;
     }
     return lista.filter(cao => cao.id == id)[0];
+}
+function findProprietario(id){
+    return window.listaProprietarios.filter(proprietario => proprietario.id === id)[0];
 }
 function findFilhotes(id, tipo) {
     return window.listaFilhotes.filter(cao => tipo ? cao.paiId === id : cao.maeId === id);

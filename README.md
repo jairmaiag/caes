@@ -18,17 +18,12 @@
 ## Site para anúncios de filhotes.
 A execução pode ser feita em <a href="https://jairmaiag.github.io/caes/" alt="site de caẽs" target="_blank">https://jairmaiag.github.io/caes/</a>
 
-[https://jairmaiag.github.io/caes](https://jairmaiag.github.io/caes/)  
-
 Aqui foi estudado o Bootstrap 4.6.1, JQuery 3 e [font-awesome 4.7.0](https://onface.github.io/font-awesome/) para os ícones.
 
 Leitura de arquivos JSON para:
 
 * **Criação do menu de forma automática.**
-* **Exibição das clínicas.**
-* **Exibição das regras.**
-* **Exibição das dicas.**
+* **Exibição dos pais e mães.**
+* **Exibição dos filhotes.**
 
-Este pode conter formulários de pesquisas do Google forms.  
-
-Foi resolvido o problema do botão hamburger (em browser mobile), que quando clicado em uma das opções o mesmo não fechava.
+Foi resolvido o problema do menu hamburger (em browser mobile), que quando clicado em uma das opções o mesmo não fechava.
