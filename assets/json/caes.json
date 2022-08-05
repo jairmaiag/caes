@@ -1,6 +1,22 @@
 {
     "lista": [
         {
+            "id": 11,
+            "nome": "Havena",
+            "nascimento": "2022-06-22T03:00:00.000Z",
+            "paiId": 7,
+            "maeId": null,
+            "vendido": false,
+            "dataVenda":null,
+            "sexo": "F",
+            "raca": "Spitz Alemão",
+            "imagem": null,
+            "imagens": [],
+            "vacinas": [],
+            "proprietarioId":1,
+            "descricao": "Muito peluda, muito fofa."
+        },
+        {
             "id": 1,
             "nome": "Odin",
             "nascimento": "2021-10-20T03:00:00.000Z",
