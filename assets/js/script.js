@@ -2,6 +2,7 @@ $(() => {
     criarMenu();
     exibeConteudo('home');
     ajustarLinkHome();
+    
     window.listaProprietarios = [];
     window.listaPais = [];
     window.listaFilhotes = [];
@@ -16,6 +17,7 @@ $(() => {
     window.jsonPais = $.getJSON(`${dirJson}caes.json`);
     window.jsonPais.done(data => {
         const { lista } = data;
+        lista.sort(sortById);
         window.listaPais = lista
             .filter(cao => !cao.vendido)
             .map(dado => montarObjetoCao(dado, lista, false));
@@ -24,6 +26,7 @@ $(() => {
     window.jsonFilhotes = $.getJSON(`${dirJson}filhotes.json`);
     window.jsonFilhotes.done(data => {
         const { lista: filhotes } = data;
+        filhotes.sort(sortById);
         window.listaFilhotes = filhotes
             .filter(cao => !cao.vendido)
             .map(dado => montarObjetoCao(dado, window.listaPais, true));
@@ -32,10 +35,19 @@ $(() => {
     delete window.jsonPais;
     delete window.jsonFilhotes;
 });
-
+function sortById(objA, objB){
+    if (objA.id > objB.id) {
+        return 1;
+      }
+      if (objA.id < objB.id) {
+        return -1;
+      }
+      // a must be equal to b
+      return 0;
+}
 function montarObjetoCao(dado, lista, filhote) {
-    const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor, proprietarioId } = dado;
-    const proprietario = findProprietario(proprietarioId);
+    const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor, proprietariosId } = dado;
+    const proprietarios = findProprietario(proprietariosId);
     const pai = findCao(paiId, lista);
     const mae = findCao(maeId, lista);
     const textos = [];
@@ -62,7 +74,7 @@ function montarObjetoCao(dado, lista, filhote) {
         textoprincipal: `Descrição: ${descricao}`,
         textos,
         outrosTextos: textos,
-        proprietario
+        proprietarios
     }
 }
 
@@ -80,8 +92,18 @@ function findCao(id, lista) {
     }
     return lista.filter(cao => cao.id == id)[0];
 }
-function findProprietario(id){
-    return window.listaProprietarios.filter(proprietario => proprietario.id === id)[0];
+function findProprietario(listaId){
+    const retorno = [];
+    if(!listaId){
+        return retorno;    
+    }
+    listaId.forEach(idProprietario => {
+        const proprietario = window.listaProprietarios.find(proprietario => proprietario.id === idProprietario);
+        if(proprietario){
+            retorno.push(proprietario)
+        }
+    });
+    return retorno;
 }
 function findFilhotes(id, tipo) {
     return window.listaFilhotes.filter(cao => tipo ? cao.paiId === id : cao.maeId === id);

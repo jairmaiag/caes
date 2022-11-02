@@ -13,7 +13,7 @@
             "imagem": null,
             "imagens": [],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1,2],
             "descricao": "Muito peluda, muito fofa."
         },
         {
@@ -29,7 +29,7 @@
             "imagem": null,
             "imagens": [],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1,2,3],
             "descricao": "Gosta de receber os donos quando chegam em casa."
         },
         {
@@ -45,7 +45,7 @@
             "imagem": null,
             "imagens": [],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1],
             "descricao": "Meiga e esbelta, tem um latido muito agradável e engraçado."
         },
         {
@@ -61,7 +61,7 @@
             "imagem": null,
             "imagens": [],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1],
             "descricao": "Arranha os potes de água quando estão vazios."
         },
         {
@@ -77,7 +77,7 @@
             "imagem": null,
             "imagens": [],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1],
             "descricao": "Geniosa. Quando toma banho fica com um humor terrível."
         },
         {
@@ -93,7 +93,7 @@
             "imagem": null,
             "imagens": [],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1],
             "descricao": "Um amor, sempre feliz e disposta a receber um chamego."
         },
         {
@@ -109,7 +109,7 @@
             "imagem": null,
             "imagens": [],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1],
             "descricao": "Muito esperta, vive fuçando o quintal cavando buracos."
         },
         {
@@ -139,7 +139,7 @@
                 }
             ],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1],
             "descricao": "Muito engraçado! Quando olha para as pessoas ele inclina a cabeça."
         },
         {
@@ -155,7 +155,7 @@
             "imagem": null,
             "imagens": [],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1],
             "descricao": "Paqueradora com os donos, mas extremamente ciumenta com o Conan."
         },
         {
@@ -220,7 +220,7 @@
                 }
             ],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1],
             "descricao": "Agitada, não gosta de ninguém passando na frente da casa."
         },
         {
@@ -236,7 +236,7 @@
             "imagem": null,
             "imagens": [],
             "vacinas": [],
-            "proprietarioId":1,
+            "proprietariosId": [1],
             "descricao": "Grandona e desajeitada, tem a Frida como parceira de bagunça."
         }
     ]
