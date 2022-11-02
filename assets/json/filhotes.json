@@ -10,8 +10,56 @@
             "vendido": false,
             "dataVenda": null,
             "raca": "Shih-tzu",
-            "imagem": "",
-            "imagens": [],
+            "imagem": {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/costela/costela01.jpeg",
+                "alt": "Costela"
+            },
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/costela/costela01.jpeg",
+                    "alt": "Costela 01"
+                },
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/costela/costela02.jpeg",
+                    "alt": "Costela 02"
+                },
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/costela/costela03.jpeg",
+                    "alt": "Costela 03"
+                },
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/costela/costela04.jpeg",
+                    "alt": "Costela 04"
+                },
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/costela/costela05.jpeg",
+                    "alt": "Costela 05"
+                },
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/costela/costela06.jpeg",
+                    "alt": "Costela 06"
+                },
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/costela/costela07.jpeg",
+                    "alt": "Costela 07"
+                }
+            ],
             "vacinas": [],
             "valor": 1000.00,
             "descricao": "A maior de todos e tem cheiro de costela."

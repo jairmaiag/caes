@@ -42,9 +42,9 @@ function sortById(objA, objB){
       if (objA.id < objB.id) {
         return -1;
       }
-      // a must be equal to b
       return 0;
 }
+
 function montarObjetoCao(dado, lista, filhote) {
     const { id, nome, nascimento, paiId, maeId, sexo, raca, descricao, valor, proprietariosId } = dado;
     const proprietarios = findProprietario(proprietariosId);
