@@ -132,8 +132,50 @@
             "vendido": false,
             "dataVenda": null,
             "raca": "Shih-tzu",
-            "imagem": "",
-            "imagens": [],
+            "imagem": {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/miniodin2/miniodin01.jpeg",
+                "alt": "Odinzinho 01"
+            },
+            "imagens": [
+                {
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/miniodin2/miniodin01.jpeg",
+                    "alt": "Odinzinho 01"
+                },{
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/miniodin2/miniodin02.jpeg",
+                    "alt": "Odinzinho 02"
+                },{
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/miniodin2/miniodin03.jpeg",
+                    "alt": "Odinzinho 03"
+                },{
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/miniodin2/miniodin04.jpeg",
+                    "alt": "Odinzinho 04"
+                },{
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/miniodin2/miniodin05.jpeg",
+                    "alt": "Odinzinho 05"
+                },{
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/miniodin2/miniodin06.jpeg",
+                    "alt": "Odinzinho 06"
+                },{
+                    "altura": "400",
+                    "largura": "200",
+                    "arquivo": "assets/images/caes/miniodin2/miniodin07.jpeg",
+                    "alt": "Odinzinho 07"
+                }
+            ],
             "vacinas": [],
             "valor": 600.00,
             "descricao": "Tem todo geito do pai."
@@ -192,46 +234,6 @@
                 "largura": "200",
                 "arquivo": "assets/images/caes/minidarck/minidarck04.jpeg",
                 "alt": "Minidarck 04"
-            },            {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/minidarck/minidarck05.jpeg",
-                "alt": "Minidarck 05"
-            },            {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/minidarck/minidarck06.jpeg",
-                "alt": "Minidarck 06"
-            },            {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/minidarck/minidarck07.jpeg",
-                "alt": "Minidarck 07"
-            },            {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/minidarck/minidarck08.jpeg",
-                "alt": "Minidarck 08"
-            },            {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/minidarck/minidarck09.jpeg",
-                "alt": "Minidarck 09"
-            },            {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/minidarck/minidarck10.jpeg",
-                "alt": "Minidarck 10"
-            },            {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/minidarck/minidarck11.jpeg",
-                "alt": "Minidarck 11"
-            },            {
-                "altura": "400",
-                "largura": "200",
-                "arquivo": "assets/images/caes/minidarck/minidarck12.jpeg",
-                "alt": "Minidarck 12"
             }
             ],
             "vacinas": [],
