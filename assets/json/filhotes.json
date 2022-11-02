@@ -74,8 +74,50 @@
             "vendido": false,
             "dataVenda": null,
             "raca": "Shih-tzu",
-            "imagem": "",
-            "imagens": [],
+            "imagem": {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/queen/queen01.jpeg",
+                "alt": "Queen 01"
+            },
+            "imagens": [
+            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/queen/queen01.jpeg",
+                "alt": "Queen 01"
+            },
+            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/queen/queen02.jpeg",
+                "alt": "Queen 02"
+            },
+            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/queen/queen03.jpeg",
+                "alt": "Queen 03"
+            },
+            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/queen/queen04.jpeg",
+                "alt": "Queen 04"
+            },
+            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/queen/queen05.jpeg",
+                "alt": "Queen 05"
+            },
+            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/queen/queen06.jpeg",
+                "alt": "Queen 06"
+            }
+            ],
             "vacinas": [],
             "valor": 1000.00,
             "descricao": "Gosta de ficar em lugares altos."
@@ -122,8 +164,76 @@
             "vendido": false,
             "dataVenda": null,
             "raca": "Shih-tzu",
-            "imagem": "",
-            "imagens": [],
+            "imagem": {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck01.jpeg",
+                "alt": "Minidarck 01"
+            },
+            "imagens": [
+            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck01.jpeg",
+                "alt": "Minidarck 01"
+            },
+            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck02.jpeg",
+                "alt": "Minidarck 02"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck03.jpeg",
+                "alt": "Minidarck 03"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck04.jpeg",
+                "alt": "Minidarck 04"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck05.jpeg",
+                "alt": "Minidarck 05"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck06.jpeg",
+                "alt": "Minidarck 06"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck07.jpeg",
+                "alt": "Minidarck 07"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck08.jpeg",
+                "alt": "Minidarck 08"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck09.jpeg",
+                "alt": "Minidarck 09"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck10.jpeg",
+                "alt": "Minidarck 10"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck11.jpeg",
+                "alt": "Minidarck 11"
+            },            {
+                "altura": "400",
+                "largura": "200",
+                "arquivo": "assets/images/caes/minidarck/minidarck12.jpeg",
+                "alt": "Minidarck 12"
+            }
+            ],
             "vacinas": [],
             "valor": 1000.00,
             "descricao": "Igualzinha a mãe."
