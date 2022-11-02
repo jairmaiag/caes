@@ -154,16 +154,21 @@ Detalhes.prototype.fotos = function () {
     const { imagens } = this.dados;
     if (imagens && imagens.length > 0) {
         imagens.forEach(im => {
+            const linkImg = $(document.createElement('a'));
+            linkImg.attr('href',im.arquivo);
+            linkImg.attr('target','blanck');
             const image = criarImage(im);
             image.addClass('mr-3');
             image.addClass('mt-3');
-            image.appendTo(divFotos);
+            image.appendTo(linkImg);
+            linkImg.appendTo(divFotos);
         });
     }
 }
 function criarImage(imagem) {
     const imagePrincipal = $(document.createElement('img'));
-    imagePrincipal.addClass('rounded');
+    imagePrincipal.addClass('img-fluid');
+    imagePrincipal.addClass('img-thumbnail');
     imagePrincipal.attr('width', imagem.largura);
     imagePrincipal.attr('height', imagem.altura);
     imagePrincipal.attr('src', imagem.arquivo);
