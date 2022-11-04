@@ -7,8 +7,8 @@
             "paiId": 1,
             "maeId": 4,
             "sexo": "F",
-            "vendido": false,
-            "dataVenda": null,
+            "vendido": true,
+            "dataVenda": "2022-11-03T03:00:00.000Z",
             "raca": "Shih-tzu",
             "imagem": {
                 "altura": "400",
